@@ -39,11 +39,30 @@ let person = {
 person.name = "mario";
 person.score = 40;
 
-const score = person.score
+const score = person.score;
 
-console.log(score);
+// functions
 
+function addTwoNumbers(a: number, b: number): number {
+  // ": number" after braces means return value must be a number
+  return a + b;
+}
 
-// functions 
+const subtractTwoNumbers = (a: number, b: number): number => {
+  return a - b;
+};
 
-function 
+function addAllNumbers(items: number[]): void {
+  const total = items.reduce((a, c) => a + c, 0);
+}
+
+addAllNumbers([5, 7, 10, 1, 4]);
+
+// return type inference
+
+function formatGreeting(name: string, greeting: string): string {
+  return `${greeting}, ${name}`;
+}
+
+const result = formatGreeting("Alexis", "Hello");
+console.log(result);

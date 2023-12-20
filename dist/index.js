@@ -26,4 +26,21 @@ let person = {
 person.name = "mario";
 person.score = 40;
 const score = person.score;
-console.log(score);
+// functions
+function addTwoNumbers(a, b) {
+    // ": number" after braces means return value must be a number
+    return a + b;
+}
+const subtractTwoNumbers = (a, b) => {
+    return a - b;
+};
+function addAllNumbers(items) {
+    const total = items.reduce((a, c) => a + c, 0);
+}
+addAllNumbers([5, 7, 10, 1, 4]);
+// return type inference
+function formatGreeting(name, greeting) {
+    return `${greeting}, ${name}`;
+}
+const result = formatGreeting("Alexis", "Hello");
+console.log(result);
